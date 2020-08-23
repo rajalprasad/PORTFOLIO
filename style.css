@@ -1,0 +1,196 @@
+:root {
+    --primary-color: rgb(245, 18, 18);
+    --primary-variant: blue;
+    --secondary-color: #1b9999;
+    --on-primary: white;
+    --on-background: grey;
+    --on-background-alt: rgba(65, 65, 65, 0.9);
+    --background: white;
+    --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] {
+    --primary-color: green;
+    --primary-variant: purple;
+    --secondary-color: cyan;
+    --on-primary: black;
+    --on-background: rgba(255, 255, 255, 0.9);
+    --on-background-alt: rgba(255, 255, 255, 0.9);
+    --background: black;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: normal;
+    text-align: center;
+}
+
+nav {
+    z-index: 10;
+    position: fixed;
+    font-family: Oswald, sans-serif;
+    letter-spacing: 3px;
+    padding: 25px;
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+a {
+    margin-right: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+a:focus {
+    color: var(--on-background);
+    border-bottom: 3px solid;
+}
+
+/* Home Section */
+.title-group {
+    text-align: center;
+}
+#home {
+    background-image: url("img/Ocean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 70px;
+}
+
+/* About Section */
+.devicon {
+    font-size: 100px;
+}
+
+.about-container {
+    display: flex;
+}
+
+.projects {
+    text-align: center;
+}
+
+/* Projects Section */
+.projects img {
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.projects p {
+    color: var(--on-background);
+}
+
+/* Contact Section */
+.fab {
+    font-size: 100px;
+    margin-right: 50px;
+    cursor: pointer;
+    color: var(--primary-color)
+}
+
+.fab:hover {
+    color: var(--on-background):
+}
+
+/* Dark Mode Toggle */
+.mode-switch-container {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 25px;
+    top: 30px;
+}
+
+.mode-switch-container span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+}
+
+.mode-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.mode-switch input {
+    display: none;
+}
+
+.slider {
+    background: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+.slider::before {
+    background: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background: var(--primary-color);
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+.fas {
+    font-size: 30px;
+    margin-right: 5px;
+}
