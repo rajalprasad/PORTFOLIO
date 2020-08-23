@@ -1,27 +1,25 @@
 :root {
     --primary-color: rgb(245, 18, 18);
-    --primary-variant: blue;
-    --secondary-color: #1b9999;
-    --on-primary: white;
     --on-background: grey;
-    --on-background-alt: rgba(65, 65, 65, 0.9);
     --background: white;
-    --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+    --text-color: black;
 }
 
 [data-theme="dark"] {
     --primary-color: green;
-    --primary-variant: purple;
-    --secondary-color: cyan;
-    --on-primary: black;
     --on-background: rgba(255, 255, 255, 0.9);
-    --on-background-alt: rgba(255, 255, 255, 0.9);
     --background: black;
+    --text-color: white;
 }
 
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--primary-color);
 }
 
 section {
@@ -49,14 +47,16 @@ h3 {
     text-align: center;
 }
 
+/* Navigation Bar */
 nav {
     z-index: 10;
     position: fixed;
-    font-family: Oswald, sans-serif;
+    font-family: sans-serif;
+    top: 0;
     letter-spacing: 3px;
     padding: 25px;
     width: 100vw;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 1.0);
 }
 
 a {
@@ -80,7 +80,6 @@ a:focus {
     background-image: url("img/Ocean.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: 70px;
 }
 
 /* About Section */
@@ -112,11 +111,11 @@ a:focus {
     font-size: 100px;
     margin-right: 50px;
     cursor: pointer;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 .fab:hover {
-    color: var(--on-background):
+    color: var(--on-background);
 }
 
 /* Dark Mode Toggle */
@@ -126,7 +125,7 @@ a:focus {
     z-index: 100;
     position: fixed;
     right: 25px;
-    top: 30px;
+    top: 15px;
 }
 
 .mode-switch-container span {
@@ -193,4 +192,35 @@ input:checked + .slider::before {
 .fas {
     font-size: 30px;
     margin-right: 5px;
+}
+
+.topnav .hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 70px;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.hamburger {
+        float: left;
+        display: block;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    a {
+        font-size: 2rem;
+    }
+    nav {
+        padding: 15px;
+    }
+    .devicon {
+        text-align: center;
+    }
 }

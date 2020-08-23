@@ -22,11 +22,14 @@
         </label>
     </div>
     <!-- Navigation -->
-    <nav id="nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contacts">CONTACT</a>
+    <nav id="nav" class="topnav">
+        <a class="hamburger" onclick="NavDrawer()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a href="#home" onclick="NavDrawerHide()">HOME</a>
+        <a href="#about" onclick="NavDrawerHide()">ABOUT</a>
+        <a href="#projects" onclick="NavDrawerHide()">PROJECTS</a>
+        <a href="#contact" onclick="NavDrawerHide()">CONTACT</a>
     </nav>
     <!-- Home Section -->
     <section id="home">
