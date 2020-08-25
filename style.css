@@ -1,15 +1,21 @@
 :root {
     --primary-color: rgb(245, 18, 18);
-    --on-background: grey;
     --background: white;
-    --text-color: black;
+    --fontawesome-hover: white;
+    --h3-text-color: black;
+    --h2-text-color: black;
+    --anchor-focus:white;
+    --mode-text: black;
 }
 
 [data-theme="dark"] {
-    --primary-color: green;
-    --on-background: rgba(255, 255, 255, 0.9);
+    --primary-color: rgb(4, 213, 4);
     --background: black;
-    --text-color: white;
+    --fontawesome-hover: white;
+    --h3-text-color: white;
+    --h2-text-color: white;
+    --anchor-focus:white;
+    --mode-text: white;
 }
 
 html {
@@ -39,12 +45,14 @@ h1 {
 h2 {
     font-size: 50px;
     font-family: sans-serif;
+    color: var(--h2-text-color);
 }
 
 h3 {
     font-size: 32px;
     font-weight: normal;
     text-align: center;
+    color: var(--h3-text-color);
 }
 
 /* Navigation Bar */
@@ -68,7 +76,7 @@ a {
 }
 
 a:focus {
-    color: var(--on-background);
+    color: var(--anchor-focus);
     border-bottom: 3px solid;
 }
 
@@ -95,15 +103,15 @@ a:focus {
     text-align: center;
 }
 
+#about h3 {
+    padding: 5px;
+}
+
 /* Projects Section */
 .projects img {
     width: 50%;
     height: 50%;
     cursor: pointer;
-}
-
-.projects p {
-    color: var(--on-background);
 }
 
 /* Contact Section */
@@ -115,7 +123,7 @@ a:focus {
 }
 
 .fab:hover {
-    color: var(--on-background);
+    color: var(--fontawesome-hover);
 }
 
 /* Dark Mode Toggle */
@@ -137,7 +145,7 @@ a:focus {
     position: relative;
     top: -4px;
     right: 5px;
-    color: var(--on-background);
+    color: var(--mode-text);
 }
 
 .mode-switch {
