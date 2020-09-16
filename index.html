@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rajal Prasad</title>
-    <!-- TODO, Favicon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Dark Mode Switch -->
     <div class="mode-switch-container">
@@ -22,11 +24,14 @@
         </label>
     </div>
     <!-- Navigation -->
-    <nav id="nav">
-        <a href="#home">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contacts">CONTACT</a>
+    <nav id="nav" class="topnav">
+        <a class="hamburger" onclick="NavDrawer()">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a href="#home" onclick="NavDrawerHide()">HOME</a>
+        <a href="#about" onclick="NavDrawerHide()">ABOUT</a>
+        <a href="#projects" onclick="NavDrawerHide()">PROJECTS</a>
+        <a href="#contact" onclick="NavDrawerHide()">CONTACT</a>
     </nav>
     <!-- Home Section -->
     <section id="home">
@@ -40,8 +45,10 @@
         <h1>About Me</h1>
         <h3>
             Hi, my name is Rajal, I go by Raj for short. I am a Bay Area based software developer who loves to code.
-            I have great technicals skills and I come from a Technical Support background. I also have great customer service skills as 
-            I talk to various clients on my day to day job. I love all things tech and I hope to talk more about this with you.
+            I have great technicals skills and I come from a Technical Support background. I also have great customer
+            service skills as
+            I talk to various clients on my day to day job. I love all things tech and I hope to talk more about this
+            with you.
         </h3>
         <h1>Skills</h1>
         <div class="devicon">
@@ -56,6 +63,7 @@
             <i class="devicon-java-plain-wordmark colored"></i>
         </div>
         <h1>Education</h1>
+        <img src="img/WGU.png" alt="Western Governors University">
         <h3>Bachelor of Science, Software Development, Western Governors University, 2020</h3>
     </section>
     <!-- Projects Section -->
@@ -63,36 +71,38 @@
         <h1>Projects</h1>
         <div class="projects">
             <div>
-                <h2>Paint-App</h2>
-                    <a href="https://google.com" target="_blank">
-                        <img src="img/Paint-App2.png" alt="Paint-App">
-                        <p>Paint application using only HTML, CSS, and JavaScript</p>
-                    </a>
-            </div>
-            <div>
                 <h2>Quote Generator</h2>
-                    <a href="google.com" target="_blank">
-                        <img src="img/Quote-Generator.png" alt="Quote-Generator">
-                        <p>Self explanatory application which uses async methods to retreive quotes from an API</p>
-                    </a>
+                <a href="https://quote-generator-1.herokuapp.com/" target="_blank">
+                    <img src="img/Quote-Generator.png" alt="Quote-Generator">
+                    <p>A quote generator app which uses async methods to retreive quotes from an API</p>
+                </a>
             </div>
             <div>
                 <h2>Crown-Clothing</h2>
-                    <a href="google.com" target="_blank">
-                        <img src="img/Crown-Clothing.png" alt="Crown-Clothing">
-                        <p>React Single Page Application utilizing Redux, Google Firebase, and Stripe API</p>
-                    </a>
+                <a href="https://crown-clothing-670.herokuapp.com/" target="_blank">
+                    <img src="img/Crown-Clothing.png" alt="Crown-Clothing">
+                    <p>React Single Page Application utilizing Redux, Google Firebase, and Stripe API</p>
+                </a>
             </div>
         </div>
     </section>
     <!-- Contact Section -->
     <section id="contact">
+        <h1>Get in Touch!</h1>
         <div class="social-icons">
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin-in"></i>
+            <a href="https://github.com/rajalprasad" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rajal-prasad-56709368/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:rajalprasad@gmail.com">
+                <i class="fas fa-envelope-square"></i>
+            </a>
         </div>
     </section>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
