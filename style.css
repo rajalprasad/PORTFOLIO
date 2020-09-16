@@ -94,7 +94,7 @@ a:hover {
 #home h3 {
     font-weight: 700;
     font-size: 3rem;
-    color: black;
+    color: #ffffff;
 }
 
 /* About Section */
@@ -277,5 +277,16 @@ input:checked + .slider::before {
     }
     .fas.fa-envelope-square {
         font-size: 50px;
+    }
+    #about img {
+        width: 40%;
+    }
+    .projects img {
+        width: 100%;
+    }
+    #home h3 {
+        font-weight: 700;
+        font-size: 3rem;
+        color: black;
     }
 }
